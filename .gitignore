@@ -1,0 +1,19 @@
+# Python environments
+venv/
+env/
+.env
+
+# Compiled Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and model artifacts
+# (It's best practice not to push datasets or large binary pickle files to GitHub)
+*.csv
+train.csv
+model_artifacts.pkl
+
+# OS generated files
+.DS_Store
+Thumbs.db
