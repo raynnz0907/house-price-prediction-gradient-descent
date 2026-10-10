@@ -163,7 +163,3 @@ Run `python train_and_save.py` to print your own numbers, then record them here:
 Python · NumPy · pandas · scikit-learn (preprocessing and metrics only) · Matplotlib · Seaborn · Streamlit · Flask
 
 ---
-
-## 📄 License
-
-Add a license of your choice (for example MIT) before publishing.
