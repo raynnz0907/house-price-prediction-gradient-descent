@@ -151,8 +151,9 @@ def predict():
             {"Location": abs(loc_sum), "Size": abs(size_sum), "Building": abs(bldg_sum)},
             key=lambda k: {"Location": abs(loc_sum), "Size": abs(size_sum), "Building": abs(bldg_sum)}[k]
         )
+        price_display = f"₹{round(price / 100, 2):,} Crore" if price >= 100 else f"₹{round(price, 1):,} Lakhs"
         summary = (f"This {d['bhk']}-BHK {d['property_type'].lower()} in {d['city']} is "
-                   f"estimated at ₹{round(price, 1):,} Lakhs. ")
+                   f"estimated at {price_display}. ")
         if dominant == "Location":
             summary += (f"Location is the biggest driver — {d['locality_type']} areas "
                         f"in {d['city']} carry the most weight in the model. ")
@@ -176,6 +177,7 @@ def predict():
                 "top_positive":  top_positive,
                 "top_negative":  top_negative,
                 "summary":       summary,
+                "all_features":  [x for x in items if abs(x["contrib"]) > 0.001]
             }
         })
 
