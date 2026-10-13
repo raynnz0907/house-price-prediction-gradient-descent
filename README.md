@@ -136,18 +136,6 @@ Run `python train_and_save.py` to print your own numbers, then record them here:
 | **L1 (λ = 0.01), deployed** | _fill in_ | _fill in_ |
 
 ---
-
-## ⚠️ Known Limitations
-
-- `app.py` and `server.py` do not expose **Parking**, **Lift_Available** and **Gated_Community**; these are filled with `0` at prediction time, so the model treats every property as having none of them.
-- L1 is optimised with sub-gradient descent, so small weights oscillate near zero instead of being exactly zero.
-- Single train–test split, no cross-validation, and no comparison against non-linear models.
-- The model has no time component, so it cannot reflect market trends.
-- `model_artifacts.pkl` was saved with a specific scikit-learn version; loading it under a different version shows an `InconsistentVersionWarning`. Re-run `train_and_save.py` in your own environment to avoid this.
-- `requirements.txt` lists Flask but not Streamlit, so install Streamlit separately (or add it to the file).
-
----
-
 ## 🔭 Future Work
 
 - Add the three amenity inputs to both interfaces
