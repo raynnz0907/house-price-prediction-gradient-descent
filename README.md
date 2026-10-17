@@ -40,10 +40,10 @@ git clone <your-repo-url>
 cd <your-repo-folder>
 
 python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+source venv/bin/activate        
 
 pip install -r requirements.txt
-pip install streamlit           # needed for app.py
+pip install streamlit           
 ```
 
 ---
@@ -71,9 +71,6 @@ streamlit run app.py
 ```bash
 python server.py
 ```
-
-Then open <http://127.0.0.1:5000>.
-
 #### API example
 
 ```bash
